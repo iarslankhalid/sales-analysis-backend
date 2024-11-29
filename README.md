@@ -2,6 +2,7 @@
 This is the assessment for Home Easy
 
 # Project Structure
+```
 sales_analysis_backend/
 ├── app/                  # Core application code
 │   ├── __init__.py       # Makes the folder a Python package
@@ -26,3 +27,4 @@ sales_analysis_backend/
 ├── requirements.txt      # Python dependencies
 ├── README.md             # Project documentation
 ├── .gitignore            # Ignored files in Git
+```
