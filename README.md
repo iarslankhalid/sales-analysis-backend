@@ -1,5 +1,18 @@
-# sales-analysis-backend
-This is the assessment for Home Easy
+# Sales Analysis Backend
+
+## Description
+A backend system to analyze sales data using a Large Language Model (LLM) with endpoints for individual, team, and trend analysis.
+
+## Setup
+1. Clone the repository.
+2. Install dependencies: `pip install -r requirements.txt`.
+3. Run the server: `uvicorn app.main:app --reload`.
+
+## Endpoints
+1. `/api/rep_performance/`: Analyze individual performance.
+2. `/api/team_performance/`: Analyze team performance.
+3. `/api/performance_trends/`: Analyze sales trends.
+
 
 # Project Structure
 ```
