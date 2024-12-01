@@ -71,16 +71,16 @@ echo Creating virtual environment...
 :: Activate virtual environment
 call venv\Scripts\activate
 
+echo Creating virtual environment...
+%PYTHON_EXE% -U pip
+
 :: Install requirements
 echo Installing required packages...
 pip install -r requirements.txt
 
-:: Install necessary dependencies for Uvicorn and Flask-ASGI
-echo Installing Uvicorn and Flask-ASGI...
-pip install uvicorn flask-asgi
 
-:: Run the Flask app with Uvicorn
-echo Running Flask app with Uvicorn...
+:: Run the Fastapi app with Uvicorn
+echo Running Fastapi app with Uvicorn...
 uvicorn app.main:app --reload
 
 pause
