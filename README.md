@@ -5,7 +5,14 @@ A backend system to analyze sales data using a Large Language Model (LLM) with e
 
 ## Setup
 1. Clone the repository.
+2. Creat a virtual enviornment: 
+    ```bash
+    python -m venv venv
+    ```
 2. Install dependencies: `pip install -r requirements.txt`.
+3. create an XAI API
+4. create a `.env` file in the project directory.
+5. 
 3. Run the server: `uvicorn app.main:app --reload`.
 
 ## Endpoints
@@ -28,6 +35,7 @@ sales_analysis_backend/
 │   │   ├── __init__.py
 │   │   ├── data_ingestion.py
 │   │   ├── gpt_integration.py
+|   |   ├── format_response.py
 │   │   ├── feedback_generator.py
 │   ├── main.py           
 ├── tests/                
