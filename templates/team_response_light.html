@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team Performance Analysis</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9; /* Lighter background for a softer look */
+      margin: 0;
+      padding: 0;
+      color: #333; /* Darker text for better readability */
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #3c5a99; /* Adjusted color */
+      margin-bottom: 10px; /* Kept original spacing */
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: #3c5a99; /* Adjusted color */
+      margin-bottom: 10px; /* Kept original spacing */
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 5px; /* Kept original spacing */
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 20px auto; /* Kept original spacing */
+      padding: 20px; /* Kept original spacing */
+      background-color: #fff; /* White background for the content */
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .team-performance {
+      width: 100%;
+      margin: 20px 0; /* Kept original spacing */
+      border-collapse: collapse;
+    }
+
+    .team-performance th, .team-performance td {
+      padding: 12px 15px; /* Kept original padding */
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .team-performance th {
+      background-color: #6c7a89; /* Subtle grayish blue for the header */
+      color: white;
+    }
+
+    .team-performance tr:nth-child(even) {
+      background-color: #f5f5f5; /* Light gray background for even rows */
+    }
+
+    .team-performance tr:hover {
+      background-color: #ececec; /* Slightly darker hover color */
+    }
+
+    .performance-analysis {
+      padding: 20px;
+      background-color: #f1f1f1; /* Light gray for the analysis section */
+      border-radius: 6px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .analysis ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .analysis li {
+      padding-left: 1.5em;
+      text-indent: -1.5em;
+    }
+
+    .analysis h3 {
+      color: #2c3e50; /* Slightly darker text color */
+      font-size: 1.1rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Team Performance Analysis</h1>
+    <div class="performance-summary">
+      <h2>Team Performance Summary</h2>
+      <table class="team-performance">
+        <tr><th>Total Sales</th><td>{{ total_sales }}</td></tr>
+        <tr><th>Average Conversion Rate</th><td>{{ conversion_rate }}</td></tr>
+        <tr><th>Deals Closed</th><td>{{ deals_closed }}</td></tr>
+        <tr><th>Average Revenue Per Deal</th><td>{{ average_revenue_per_deal }}</td></tr>
+        <tr><th>Total Tours in Pipeline</th><td>{{ total_tours_in_pipeline }}</td></tr>
+        <tr><th>Total Revenue Pending</th><td>{{ total_revenue_pending }}</td></tr>
+        <tr><th>Top Performer</th><td>{{ top_performer }}</td></tr>
+      </table>
+    </div>
+
+    <div class="performance-analysis">
+      <h2>Performance Analysis</h2>
+      <div class="analysis">
+        {{ analysis | safe }}
+      </div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Team Performance Analysis</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #e74c3c;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: #e74c3c;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #34495e;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .team-performance {
+      width: 100%;
+      margin: 20px 0;
+      border-collapse: collapse;
+    }
+
+    .team-performance th, .team-performance td {
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      text-align: left;
+    }
+
+    .team-performance th {
+      background-color: #6c7a89;
+      color: white;
+    }
+
+    .team-performance tr:nth-child(even) {
+      background-color: #3c4d63;
+    }
+
+    .team-performance tr:hover {
+      background-color: #4c5c6b;
+    }
+
+    .performance-analysis {
+      padding: 20px;
+      background-color: #34495e;
+      border-radius: 6px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .analysis ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-top: 0; /* Reduced margin to fix spacing issue */
+    }
+
+    .analysis li {
+      padding-left: 1.5em;
+      text-indent: -1.5em;
+      line-height: 1.6; /* Improved readability */
+    }
+
+    .analysis h3 {
+      color: #ecf0f1;
+      font-size: 1.1rem;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: #bdc3c7;
+    }
+
+    /* Back Button Styling */
+    .back-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #34495e;
+      color: #ecf0f1;
+      text-decoration: none;
+      border-radius: 5px;
+      border: 2px solid #e74c3c;
+      transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #e74c3c;
+      color: #ecf0f1;
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Team Performance Analysis</h1>
+    <div class="performance-summary">
+      <h2>Team Performance Summary</h2>
+      <table class="team-performance">
+        <tr><th>Total Sales</th><td>{{ total_sales }}</td></tr>
+        <tr><th>Average Conversion Rate</th><td>{{ conversion_rate }}</td></tr>
+        <tr><th>Deals Closed</th><td>{{ deals_closed }}</td></tr>
+        <tr><th>Average Revenue Per Deal</th><td>{{ average_revenue_per_deal }}</td></tr>
+        <tr><th>Total Tours in Pipeline</th><td>{{ total_tours_in_pipeline }}</td></tr>
+        <tr><th>Total Revenue Pending</th><td>{{ total_revenue_pending }}</td></tr>
+        <tr><th>Top Performer</th><td>{{ top_performer }}</td></tr>
+      </table>
+    </div>
+
+    <div class="performance-analysis">
+      <h2>Performance Analysis</h2>
+      <div class="analysis">
+        <div>
+          {{ analysis | safe }}
+        </div>
+      </div>
+    </div>
+
+    <a href="/" class="back-button">Back to Home</a>
+  </div>
+</body>
+</html>

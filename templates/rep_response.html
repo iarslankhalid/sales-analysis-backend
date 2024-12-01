@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trends Analysis</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #e74c3c;
+      margin-bottom: 10px;
+    }
+    h2 {
+      font-size: 1.5rem;
+      color: #e74c3c;
+      margin-bottom: 10px;
+    }
+    h3 {
+      color: #e74c3c;
+      font-size: 1.1rem;
+    }
+    p {
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #34495e;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .performance-summary {
+      background-color: #3c4d63;
+      border-radius: 6px;
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+    .summary-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: #34495e;
+      border-radius: 4px;
+    }
+    .summary-item .label {
+      font-weight: bold;
+      color: #e74c3c;
+      margin-right: 15px;
+    }
+    .summary-item .value {
+      color: #ecf0f1;
+    }
+    .performance-analysis {
+      padding: 20px;
+      background-color: #34495e;
+      border-radius: 6px;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+    .analysis ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-top: 0; /* Reduced margin to fix spacing issue */
+    }
+    .analysis li {
+      padding-left: 1.5em;
+      text-indent: -1.5em;
+      line-height: 1.6; /* Improved readability */
+    }
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 0.9rem;
+      color: #bdc3c7;
+    }
+    /* Back Button Styling */
+    .back-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #34495e;
+      color: #ecf0f1;
+      text-decoration: none;
+      border-radius: 5px;
+      border: 2px solid #e74c3c;
+      transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+    }
+    .back-button:hover {
+      background-color: #e74c3c;
+      color: #ecf0f1;
+      transform: translateY(-2px); /* Slight lift effect */
+    }
+    /* Styling Employee Info Section */
+    .employee-info {
+      background-color: #3c4d63;
+      padding: 15px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+    }
+    .employee-info p {
+      font-size: 1.2rem;
+    }
+    .employee-info strong {
+      color: #e74c3c;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Sales Representative Performance Analysis</h1>
+    <div class="employee-info">
+        <h2>Employee Information</h2>
+        <p><strong>ID:</strong> {{ employee_id }}</p>
+        <p><strong>Name:</strong> {{ employee_name }}</p>
+    </div>
+    <div class="performance-analysis">
+        <h2>Performance Analysis</h2>
+        <div class="analysis">
+            {{ analysis | safe }}
+        </div>
+    </div>
+        
+    <!-- Back to Home button positioned below the analysis section -->
+    <a href="http://127.0.0.1:8000/api/rep_performance/" class="back-button">Back to Employee Search</a>
+  </div>
+</body>
+</html>

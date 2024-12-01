@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Employee Performance</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #2c3e50;
+            margin: 0;
+            padding: 0;
+            color: #ecf0f1;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #e74c3c;
+            margin-top: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #34495e;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .search-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .search-container input {
+            padding: 12px;
+            font-size: 1.2rem;
+            border-radius: 8px;
+            border: 2px solid #e74c3c;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            width: 60%;
+        }
+
+        .search-container button {
+            padding: 12px 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ecf0f1;
+            background-color: #e74c3c;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .search-container button:hover {
+            background-color: #c0392b;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Back to Home Button Positioned Below the Search Form */
+        .back-home-button {
+            display: inline-block;
+            margin-top: 20px; /* Adjust this margin for positioning below the search box */
+            padding: 10px 20px;
+            background-color: #34495e;
+            color: #ecf0f1;
+            text-decoration: none;
+            border-radius: 5px;
+            border: 2px solid #e74c3c;
+            transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+        }
+
+        .back-home-button:hover {
+            background-color: #e74c3c;
+            color: #ecf0f1;
+            transform: translateY(-2px); /* Slight lift effect */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Search Employee Performance</h1>
+        <div class="search-container">
+            <form action="/api/rep_performance/performance" method="get">
+                <input type="text" name="rep_id" placeholder="Enter Employee ID" required />
+                <button type="submit">Search</button>
+            </form>
+        </div>
+
+        <!-- Back to Home button positioned below the search container -->
+        <a href="/" class="back-home-button">Back to Home</a>
+    </div>
+</body>
+</html>

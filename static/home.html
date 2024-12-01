@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sales Analysis API</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #2c3e50;
+            color: #ecf0f1;
+        }
+
+        header {
+            background-color: #34495e;
+            color: #e74c3c;
+            padding: 20px 0;
+            text-align: center;
+            border-bottom: 2px solid #e74c3c;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin: 10px 0 0;
+        }
+
+        main {
+            margin: 40px auto;
+            padding: 20px;
+            max-width: 900px;
+            background-color: #34495e;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        h2 {
+            color: #e74c3c;
+            margin-top: 0;
+            text-align: center;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 10px;
+        }
+
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .buttons-container a {
+            text-decoration: none;
+            display: inline-block;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ecf0f1;
+            background-color: #34495e;
+            border: 2px solid #e74c3c;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+        }
+
+        .buttons-container a:hover {
+            background-color: #e74c3c;
+            color: #ecf0f1;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #bdc3c7;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Sales Analysis API</h1>
+        <p>Analyze sales data using LLM-powered performance analysis tools</p>
+    </header>
+
+    <main>
+        <h2>API Endpoints</h2>
+        <p>Select an API route below to start analyzing sales data:</p>
+        <div class="buttons-container">
+            <a href="/api/rep_performance/">Individual Analysis</a>
+            <a href="/api/team_performance/">Team Analysis</a>
+            <a href="/api/performance_trends/">Trends and Forecasting</a>
+        </div>
+    </main>
+</body>
+</html>
