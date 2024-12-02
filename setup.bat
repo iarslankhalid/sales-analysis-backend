@@ -62,6 +62,9 @@ IF %ERRORLEVEL% NEQ 0 (
     exit /b
 )
 
+echo Checking the given path...
+%PYTHON_EXE% .\app\utils\check_filepath.py
+
 echo .env file is valid. Proceeding with virtual environment setup...
 
 :: Create virtual environment
