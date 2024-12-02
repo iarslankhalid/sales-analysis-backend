@@ -89,10 +89,10 @@ sales_analysis_backend/
 ```
 
 ## Screenshots
-Here are some screenshots for the UI:
-### Home Page: [homepage](./data/screenshots/home.png)
-### Team Performance Analysis: [team_performance](./data/screenshots/team.png)
-### Trends Analysis: [trend_analysis](./data/screenshots/trends.png)
+Here are some screenshots for the UI: <br>
+Home Page: ![Image](./data/screenshots/home.png) <br>
+Team Performance Analysis: ![Image](./data/screenshots/team.png) <br>
+Trends Analysis: ![Image](./data/screenshots/trends.png) <br>
 
 ## Note
 If you want to change the LLM API, update the `app.utils.gpt_integration` module according to the new LLM's API specifications.
